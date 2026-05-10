@@ -22,7 +22,7 @@ pipeline {
 
         stage('Desplegar') {
             steps {
-                sh 'docker compose up --detach'
+                sh 'docker compose up -d'
                 echo "Despliegue completado desde GitHub"
             }
         }
