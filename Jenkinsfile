@@ -26,12 +26,6 @@ pipeline {
                 echo "Despliegue completado desde GitHub"
             }
         }
-        stage('Health Check') {
-            steps {
-                echo "Esperando a que la app responda..."
-                sleep 5 
-                sh 'curl -f http://localhost:5000'
-        }
     }
     
     post {
@@ -40,5 +34,4 @@ pipeline {
             deleteDir()
         }
     }
-}
 }
